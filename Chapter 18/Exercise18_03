@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+/*
+ Author: Jan McNulty
+ Date: 9/15/22
+ */
+
+public class Exercise18_03 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter in two integers:");
+		int m = Integer.parseInt(input.next());
+		int n = Integer.parseInt(input.next());
+		
+		System.out.println("The greatest common divisor of " + m + " and " + n + " is " + gcd(m,n));
+		
+
+	}
+	
+	private static int gcd(int m, int n) {
+		if (m % n == 0) {
+			return n;
+		}
+			else 
+				return gcd(n, m %n);
+			
+		}
+	}
